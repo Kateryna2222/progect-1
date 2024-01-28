@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOGA</title>
-  <link rel="stylesheet" href="./fonts/Freestyle Script.zip">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <head class="head">
+  <header class="head">
     <div class="container">
       <div class="head-wrapper">
         <a href="#" class="logo"><img src="./images/logo.png" alt="logo"></a>
         <nav class="nav">
+          <input type="checkbox" id="drop-menu">
+          <label class="menu_btn" for="drop-menu">
+            <span></span>
+          </label>
+
           <ul class="menu">
             <li class="metu-item active"><a href="#">About us</a></li>
             <li class="metu-item"><a href="#">Reservation</a></li>
@@ -24,7 +28,7 @@
         </nav>
       </div>
     </div>
-  </head>
+  </header>
 
   <main>
     <section class="home">
@@ -35,8 +39,8 @@
               <p class="form-title">Trial Class</p>
               <input type="text" placeholder="Enter your name">
               <input type="tel" placeholder="Enter your phone">
-              <select value="Chose your class">
-                <option disabled selected value=""><span>Chose your class</span></option>
+              <select name="Chose your class">
+                <option disabled selected value="">Chose your class</option>
                 <option value="morning">morning</option>
                 <option value="day">day</option>
                 <option value="evening">evening</option>
@@ -51,13 +55,6 @@
         </div>
       </div>
     </section>
-
-
-
-
-    <div class="aa">
-      <img src="./images/yoga-mainpage.jpg" alt="">
-    </div>
   </main>
 
   <footer class="footer">

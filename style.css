@@ -7,6 +7,11 @@ button{cursor: pointer;}
 
 h1,h2,h3,h4,h5,h6,p{font-size:inherit;font-weight: inherit;}
 
+@font-face{
+    font-family: 'Freestyle Script', cursive;
+    src: url(./fonts/Freestyle\ Script.zip);
+}
+
 :root{
     --main-color: #5b6ded;
     --light-color: #fff;
@@ -41,6 +46,7 @@ body{
     font-size: 14px;
     font-weight: 600;
     color: #7c7c7c;
+    transition: .13s linear;
 }
 
 .metu-item,
@@ -68,6 +74,72 @@ body{
     top: 20px;
     left: 25%;
 }
+/* drop-menu */
+#drop-menu{
+    display: none;
+}
+
+.menu_btn{
+    display: none;
+    height: 40px;
+    width: 30px;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    z-index: 20;
+    top: 30px;
+    right: 15px;
+}
+
+.menu_btn > span{
+    position: relative;
+}
+
+.menu_btn > span,
+.menu_btn > span::before,
+.menu_btn > span::after{
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+.menu_btn > span::before{
+    content: "";
+    top: -12px;
+    position: absolute;
+}
+
+.menu_btn > span::after{
+    content: "";
+    top: 12px;
+    position: absolute;
+}
+
+#drop-menu:checked ~ .menu_btn > span,
+#drop-menu:checked ~ .menu_btn > span::before,
+#drop-menu:checked ~ .menu_btn > span::after{
+    transition: .1s linear;
+}
+
+#drop-menu:checked ~ .menu_btn > span{
+    transform: rotate(45deg);
+}
+
+#drop-menu:checked ~ .menu_btn > span::before{
+    top: 0;
+    transform: rotate(0);
+}
+
+#drop-menu:checked ~ .menu_btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#drop-menu:checked ~ .menu{
+    top: 0;
+}
+
 
 /* home */
 
@@ -81,14 +153,9 @@ body{
 .home-wrapper{
     display: flex;
     align-items: center;
-    padding: 100px 0px;
-}
-
-.form-wrapper{
-    width: 50%;
-    padding-right: 50px;
-    display: flex;
-    justify-content: right;
+    padding: 100px 40px;
+    justify-content: center;
+    gap: 50px;
 }
 
 form{
@@ -98,7 +165,7 @@ form{
     gap: 20px;
     padding: 35px;
     border-radius: 25px;
-    width: 300px;
+    width: 280px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -139,11 +206,12 @@ button{
     border-radius: 10px;
     letter-spacing: 1.5px;
     width: 170px;
-    margin-left: 65px;
+    margin-left: 55px;
+    transition: .2s linear;
 }
 
-.home_info{
-    padding-left: 50px;
+button:hover{
+    background-color: #4155f0;
 }
 
 h1{
@@ -166,12 +234,100 @@ h1{
 
 
 
-
-
-
-
-
-/* form #919191*/
-.aa{
-    margin-left: 250px;
+/* --------------------------------------- */
+@media(max-width: 768px){
+    /* home */
+    .home-wrapper{
+        padding: 100px 30px;
+    }
+    h1{
+        font-size: 38px;
+        line-height: 50px;
+        padding-bottom: 20px;
+    }
+    .home_info p{
+        font-size: 28px;
+    }
 }
+
+@media(max-width: 660px){
+    /* header */
+    .menu_btn{
+        display: flex;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        z-index: 10;
+        padding: 100px 0px 30px;
+        top: -1000px;
+        width: 100%;
+        right: 0;
+        background-color: #fff;
+    }
+
+    .logo{
+        position: relative;
+        z-index: 20;
+    }
+
+    .metu-item:visited{
+        color: var(--main-color);
+    }
+
+    .metu-item:visited{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: var(--main-color);
+        position: absolute;
+        top: 20px;
+        left: 25%;
+    }
+
+     /* home */
+    .home-wrapper{
+        padding: 80px 20px;
+    }
+    h1{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .home_info p{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 581px){
+    /* home */
+    .home-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+    h1{
+        font-size: 32px;
+    }
+    .home_info p{
+        font-size: 28px;
+    }
+    .home_info{
+        padding-left: 0px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 320px){
+    /* home */
+    h1{
+        font-size: 28px;
+    }
+}
+
+
+
+
+
