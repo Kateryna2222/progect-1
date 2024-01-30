@@ -206,8 +206,11 @@ button{
     border-radius: 10px;
     letter-spacing: 1.5px;
     width: 170px;
-    margin-left: 55px;
     transition: .2s linear;
+}
+
+button[type="submit"]{
+    margin-left: 55px;
 }
 
 button:hover{
@@ -343,8 +346,97 @@ h1{
     line-height: 25px;
 }
 
+/* price */
+.price{
+    background-image: url(./images/bg-03.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.price-wrapper{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 
+.price-card{
+    width: 370px;
+    border-radius: 10px;
+    overflow: hidden;
+    filter: drop-shadow(6.364px 6.364px 25px rgba(0,0,0,0.15));
+}
+
+.price-top{
+    background-color: var(--main-color);
+    padding: 30px 10px;
+    font-size: 68px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.price-top::before{
+    content: "$";
+    font-size: 32px;
+    font-weight: 600;
+    position: absolute;
+    top: 50px;
+    left: 110px;
+}
+
+.price-top::after{
+    content: "/ MONTH";
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: 80px;
+    right: 60px;
+}
+
+.price-info{
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #fff;
+}
+
+.price-card p{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #555555;
+}
+
+.price-card button{
+    border-radius: 20px;
+}
+
+.price-info_middle{
+    position: relative;
+}
+
+.price-info_middle::before,
+.price-info_middle::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    background-color: #d7d4d4;
+}
+
+.price-info_middle::before{
+    top: -20px;
+}
+.price-info_middle::after{
+    top: 40px;
+}
 
 
 
@@ -466,5 +558,9 @@ h1{
 
 
 
-
+footer img{
+    display: block;
+    margin: 0px auto;
+    border: 1px solid black;
+}
 
