@@ -242,9 +242,10 @@ h1{
     gap: 15px;
 }
 
-.program-wrapper > h2{
+h2{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 45px;
     color: var(--main-color);
     text-transform: uppercase;
 }
@@ -295,6 +296,61 @@ h1{
     color: #999999;
 }
 
+/* about us */
+.about-us__wrapper{
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.about-us__info{
+    width: 50%;
+    padding: 10px 70px 10px 10px;
+}
+
+.about-us__info p{
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 10px;
+    color: #555555;
+}
+
+/* swiper */
+.about-us__swiper {
+  position: relative;
+  padding: 0 20px;
+  width: 50%;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper{
+    align-items: center;
+}
+
+.swiper-slide {
+    padding: 0 20px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    background-color: #fff;
+    filter: drop-shadow(6.364px 6.364px 4.5px rgba(0,0,0,0.1));
+    font-weight: 800;
+    padding: 10px 16px;
+    border-radius: 50%;
+}
+
+:root {
+    --swiper-navigation-size: 20px;
+}
+
 /* info */
 .info{
     background: linear-gradient(rgba(91, 109, 237, 0.6), rgba(91, 109, 237, 0.8)), url(./images/bg-02.jpg);
@@ -322,7 +378,7 @@ h1{
     gap: 10px;
 }
 
-.info-card h2{
+h3{
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -530,6 +586,15 @@ h4{
 }
 
 @media(max-width: 930px){
+    /* about us */
+    h2{
+    font-size: 24px;
+    }
+    .about-us__info p{
+        font-size: 12px;
+        padding-top: 0;
+    }
+
     /* info */
     .info-card{
         flex-basis: 165px;
@@ -552,6 +617,24 @@ h4{
     .home_info p{
         font-size: 28px;
     }
+    /* about us */
+    .about-us__wrapper{
+        flex-direction: column;
+        padding: 60px 40px 40px;
+    }
+    .about-us__info, 
+    .about-us__swiper{
+        width: 100%;
+        padding: 0;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+    .about-us__info p{
+        font-size: 14px;
+    }
+
     /* info */
     .info-card{
         flex-basis: 260px;
@@ -645,6 +728,18 @@ h4{
         padding-left: 0;
         text-align: center;
     }
+    /* about us */
+    
+    h2{
+        font-size: 24px;
+    }
+    .about-us__info p{
+        font-size: 12px;
+        padding-top: 0;
+    }
+    .about-us__wrapper{
+        padding: 30px 0;
+    }
     /* footer */
     .add-info{
         gap: 70px;
@@ -652,6 +747,13 @@ h4{
 }
 
 @media(max-width: 430px){
+    /* info */
+    .info-wrapper{
+        padding: 50px 0;
+    }
+    .price-wrapper{
+        padding: 60px 0;
+    }
     /* footer */
     .footer-right,
     .media-icons{
